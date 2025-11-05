@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -376,4 +377,384 @@
 </script>
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Promosi Shorinji Kempo Jawa Tengah</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  :root{
+    --brown: #d2b48c;   /* background coklat muda */
+    --panel: #fff;
+    --accent: #000;
+  }
+  html,body{ height:100%; margin:0; font-family: Arial, Helvetica, sans-serif; color:#000; background:var(--brown); -webkit-font-smoothing:antialiased; }
+
+  /* centered decorative image (diperjelas: opacity lebih besar) */
+  body::before{
+    content:"";
+    position:fixed;
+    left:50%;
+    top:110px;               /* di bawah header */
+    transform:translateX(-50%);
+    width:760px;             /* ukuran gambar, ubah sesuai kebutuhan */
+    height:480px;
+    background-image: url("images/WhatsApp%20Image%202025-11-04%20at%2011.48.40.jpeg");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:contain;
+    opacity: 0.32;           /* diperjelas (tingkat transparansi) */
+    pointer-events: none;
+    z-index: 0;
+    filter: saturate(1);
+  }
+
+  /* Header */
+  header{
+    position:relative;
+    z-index: 3;
+    background: rgba(0,0,0,0.95);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    gap:18px;
+    padding: 14px 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  }
+  .logo-left img, .logo-right img{
+    height:150px; width:auto; object-fit:contain; display:block; background:#fff; padding:8px; border-radius:6px;
+  }
+  .header-text{
+    flex:1 1 auto;
+    text-align:center;
+    color:#000;
+    background: rgba(255,255,255,0.96);
+    padding:10px 14px;
+    border-radius:6px;
+  }
+  .header-text h1{ margin:0; font-size:1.6rem; font-weight:800; }
+  .header-text p{ margin:4px 0; font-size:0.95rem; color:#222; }
+
+  /* Main container (slides) */
+  main.container-main{
+    position:relative;
+    z-index: 4;
+    max-width:1100px;
+    margin: 22px auto;
+    padding: 24px;
+    background: rgba(255,255,255,0.96);
+    border-radius:10px;
+    box-shadow: 0 10px 36px rgba(0,0,0,0.18);
+    min-height: 64vh;
+  }
+
+  .section{ display:none; animation:fadeIn .35s ease-in-out; }
+  .section.active{ display:block; }
+
+  @keyframes fadeIn { from {opacity:0; transform:translateY(8px);} to {opacity:1; transform:none;} }
+
+  h2{ border-bottom: 2px solid #c49a6a; padding-bottom:6px; margin-top:6px; }
+  img, video{ max-width:100%; display:block; margin:12px 0; border-radius:8px; }
+
+  /* tombol garis 3 (TOC) di pojok kanan bawah */
+  #toc-toggle{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 99999;
+    background: #000;
+    color:#fff;
+    width:60px;
+    height:60px;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    font-size:28px;
+  }
+
+  /* panel daftar isi (slide-in dari kanan) */
+  #toc-panel{
+    position: fixed;
+    right: 20px;
+    bottom: 92px;
+    z-index: 99998;
+    width: 300px;
+    max-height: 70vh;
+    overflow:auto;
+    background: var(--panel);
+    border: 3px solid var(--accent);
+    border-radius: 10px;
+    padding:12px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.28);
+    display:none;
+  }
+  #toc-panel h5{ text-align:center; margin:0 0 8px 0; font-weight:800; }
+  #toc-panel a{ display:block; padding:8px 10px; color:#000; text-decoration:none; border-radius:6px; margin-bottom:6px; font-size:0.95rem; }
+  #toc-panel a:hover{ background:#f2e6d9; }
+
+  /* Share links */
+  .share-links{ margin-top:14px; }
+  .share-links a{ display:inline-block; margin-right:8px; margin-bottom:6px; text-decoration:none; color:#000; border:1px solid #000; padding:8px 10px; border-radius:6px; background:#fff; font-size:0.92rem; }
+  .share-links a:hover{ background:#000; color:#fff; }
+
+  /* gallery grid kecil untuk bagian kejuaraan */
+  .gallery-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin-top:12px; }
+  .gallery-grid img{ height:150px; object-fit:cover; }
+
+  @media (max-width:900px){
+    body::before{ width:340px; height:220px; top:200px; opacity:0.24; }
+    .logo-left img, .logo-right img{ height:100px; padding:6px; }
+    #toc-panel{ right:14px; width:86%; bottom:86px; }
+    #toc-toggle{ right:14px; bottom:14px; width:56px; height:56px; font-size:24px; }
+    main.container-main{ padding:16px; }
+  }
+
+</style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo-left">
+      <!-- logo kiri diperbesar -->
+      <img src="images/IMG_20181110_060328.png" alt="Logo Perkemi Kiri">
+    </div>
+
+    <div class="header-text">
+      <h1>Persaudaraan Shorinji Kempo Indonesia</h1>
+      <p>(Indonesia Shorinji Kempo Federation)</p>
+      <p><strong>Pengurus Provinsi Jawa Tengah</strong></p>
+      <p>Sekretariat: JL. Cemara 2/31 Kel. Salatiga, Kec. Sidorejo - Kota Salatiga 50711</p>
+      <p>Telp/WA: +62.82227868459 &nbsp; | &nbsp; Email: perkemi.prov.jateng@gmail.com</p>
+    </div>
+
+    <div class="logo-right">
+      <!-- logo kanan diperbesar -->
+      <img src="images/WhatsApp%20Image%202025-11-04%20at%2011.41.20.jpeg" alt="Logo Perkemi Kanan">
+    </div>
+  </header>
+
+  <!-- tombol garis 3 (pojok kanan bawah) -->
+  <div id="toc-toggle" title="Daftar Isi">☰</div>
+
+  <!-- panel daftar isi kecil -->
+  <div id="toc-panel" aria-hidden="true">
+    <h5>Daftar Isi</h5>
+    <a href="#" data-target="sekilas">Sekilas tentang Shorinji Kempo</a>
+    <a href="#" data-target="pengurus">A. Pengurus Pengprov Jateng</a>
+    <a href="#" data-target="kejuaraan">B. Kejuaraan 2025</a>
+    <a href="#" data-target="popda">C. Popda Tegal</a>
+    <a href="#" data-target="bapopsi">D. Bapopsi Semarang</a>
+    <a href="#" data-target="gashuku">E. Gashuku & Kenaikan Tingkat</a>
+    <a href="#" data-target="pelatihan">F. Pelatihan Pelatih & Wasit</a>
+    <a href="#" data-target="kabkota">G. Kegiatan Kab/Kota</a>
+  </div>
+
+  <main class="container-main">
+
+    <!-- SEKILAS -->
+    <section id="sekilas" class="section active">
+      <h2>Sekilas tentang Shorinji Kempo</h2>
+
+      <h3>Shorinji Kempo</h3>
+      <p>Shorinji Kempo adalah sebuah seni bela diri asal Jepang yang diciptakan oleh Doshin So pada tahun 1947, yang mengombinasikan teknik bela diri, pengembangan mental, dan kesehatan. Filosofi dasar: <em>shinshin-ichinyo</em> (心身一如) — <strong>jiwa dan raga tidak terpisahkan</strong>.</p>
+
+      <h3>Randori Kempo</h3>
+      <p>Randori kempo adalah nomor pertandingan (sparring) yang menggunakan teknik tangan & kaki. Melatih jarak (maai), transisi teknik, dan kemampuan menghadapi lawan nyata.</p>
+
+      <h3>Embu Kempo</h3>
+      <p>Embu Kempo adalah peragaan teknik (mirip kata) yang bisa dilakukan tunggal maupun beregu. Dinilai teknik, kerapian, kekompakan, semangat.</p>
+
+      <p style="margin-top:12px;">Klik tombol <strong>☰</strong> di pojok kanan bawah untuk membuka Daftar Isi.</p>
+    </section>
+
+    <!-- PENGURUS -->
+    <section id="pengurus" class="section">
+      <h2>A. Pengurus Pengprov Jateng</h2>
+      <p>Foto struktur pengurus Pengprov Jawa Tengah:</p>
+      <img src="images/pengurus.jpg" alt="Pengurus Pengprov Jateng">
+    </section>
+
+    <!-- KEJUARAAN -->
+    <section id="kejuaraan" class="section">
+      <h2>B. Kejuaraan 2025</h2>
+
+      <h4>a) Praporprov</h4>
+      <p>Dokumentasi kegiatan & para juara Praporprov 2025.</p>
+      <div class="gallery-grid">
+        <img src="images/praporprov1.jpg" alt="Praporprov 1">
+        <img src="images/praporprov2.jpg" alt="Praporprov 2">
+      </div>
+
+      <h4 class="mt-3">b) PON Beladiri</h4>
+
+      <p><strong>1) Ketum KONI Pusat membuka resmi PON Beladiri 2025 - Kudus</strong><br>
+        Artikel (baca): <a href="https://gerakita.com/ketum-koni-pusat-membuka-resmi-pon-bela-diri-2025-kudu" target="_blank" rel="noopener">gerakita.com</a>
+      </p>
+
+      <p><strong>2) TC Persiapan PON Beladiri — Team Jawa Tengah di KONI Salatiga</strong></p>
+      <div class="gallery-grid">
+        <img src="images/Image%20tc%20persiapan%20pon%20beladiri%20kempo.jpeg" alt="TC Persiapan 1">
+        <img src="images/WhatsApp%20Image%202025-11-04%20at%2007.46.28.jpeg" alt="TC Persiapan 2">
+      </div>
+
+      <p><strong>3) Foto setelah TC minggu di GOR Jatidiri Semarang</strong></p>
+      <div class="gallery-grid">
+        <img src="images/WhatsApp%20Image%202025-11-04%20at%2007.46.24.jpeg" alt="TC Jatidiri 1">
+        <img src="images/WhatsApp%20Image%202025-11-04%20at%2007.46.24%20(2).jpeg" alt="TC Jatidiri 2">
+        <img src="images/WhatsApp%20Image%202025-11-04%20at%2007.46.25%20(1).jpeg" alt="TC Jatidiri 3">
+      </div>
+
+      <p><strong>4) Team PON Jawa Tengah</strong></p>
+      <img src="images/WhatsApp%20Image%202025-11-04%20at%2007.46.27.jpeg" alt="Team PON Jateng">
+      <video controls>
+        <source src="videos/WhatsApp%20Video%202025-11-04%20at%2007.49.23.mp4" type="video/mp4">
+        Browser Anda tidak mendukung elemen video.
+      </video>
+
+      <p><strong>5) Pelepasan kontingen PON Beladiri Jateng (oleh Ketua KONI Jateng)</strong></p>
+      <div class="gallery-grid">
+        <img src="images/WhatsApp%20Image%202025-11-04%20at%2007.17.31.jpeg" alt="Pelepasan 1">
+        <img src="images/WhatsApp%20Image%202025-11-04%20at%2007.21.50.jpeg" alt="Pelepasan 2">
+      </div>
+
+      <p><strong>6) Upacara pembukaan pertandingan PON Beladiri</strong></p>
+      <video controls>
+        <source src="videos/WhatsApp%20Video%202025-11-04%20at%2010.07.12.mp4" type="video/mp4">
+      </video>
+
+      <p><strong>7) Para SP & SS (wasit) di PON Beladiri Kempo Kudus 2025</strong></p>
+      <img src="images/WhatsApp%20Image%202025-11-04%20at%2007.57.06.jpeg" alt="Wasit">
+      <video controls>
+        <source src="videos/WhatsApp%20Video%202025-11-04%20at%2007.57.16.mp4" type="video/mp4">
+      </video>
+
+      <p><strong>8) Defile Team Jateng</strong></p>
+      <video controls>
+        <source src="videos/WhatsApp%20Video%202025-11-04%20at%2009.27.52.mp4" type="video/mp4">
+      </video>
+
+      <p><strong>9) Giat pagi di Kudus sebelum ke venue</strong></p>
+      <img src="images/WhatsApp%20Image%202025-11-04%20at%2009.26.00%20(1).jpeg" alt="Giat pagi">
+      <video controls>
+        <source src="videos/WhatsApp%20Video%202025-11-04%20at%2009.26.04.mp4" type="video/mp4">
+      </video>
+
+      <p><strong>10) Pemanasan di GOR Kaliputu Djarum Kudus</strong></p>
+      <img src="images/WhatsApp%20Image%202025-11-04%20at%2007.11.24%20(1).jpeg" alt="Pemanasan">
+
+      <p><strong>11) Hasil PON Beladiri — Team Jateng</strong></p>
+      <img src="images/WhatsApp%20Image%202025-11-04%20at%2007.11.25%20(2).jpeg" alt="Hasil PON">
+
+      <p><strong>12) Foto Para Juara</strong></p>
+      <div class="gallery-grid">
+        <img src="images/WhatsApp%20Image%202025-11-04%20at%2007.11.27.jpeg" alt="Juara1">
+        <img src="images/WhatsApp%20Image%202025-11-04%20at%2007.11.25.jpeg" alt="Juara2">
+        <img src="images/WhatsApp%20Image%202025-11-04%20at%2007.11.25%20(1).jpeg" alt="Juara3">
+        <img src="images/WhatsApp%20Image%202025-11-04%20at%2007.11.24.jpeg" alt="Juara4">
+        <img src="images/WhatsApp%20Image%202025-11-04%20at%2007.11.26%20(1).jpeg" alt="Juara5">
+        <img src="images/WhatsApp%20Image%202025-11-04%20at%2007.11.26.jpeg" alt="Juara6">
+        <img src="images/WhatsApp%20Image%202025-11-04%20at%2007.11.26%20(2).jpeg" alt="Juara7">
+        <img src="images/WhatsApp%20Image%202025-11-04%20at%2007.13.04.jpeg" alt="Juara8">
+      </div>
+
+    </section>
+
+    <!-- POPDA -->
+    <section id="popda" class="section">
+      <h2>C. Popda Tegal</h2>
+      <p>Dokumentasi kegiatan Popda Tegal & para juara.</p>
+      <img src="images/popda1.jpeg" alt="Popda 1">
+      <img src="images/popda2.jpeg" alt="Popda 2">
+    </section>
+
+    <!-- BAPOPSI -->
+    <section id="bapopsi" class="section">
+      <h2>D. Bapopsi Semarang</h2>
+      <p>Dokumentasi kegiatan & para juara Bapopsi Semarang.</p>
+      <img src="images/bapopsi1.jpeg" alt="Bapopsi 1">
+      <img src="images/bapopsi2.jpeg" alt="Bapopsi 2">
+    </section>
+
+    <!-- GASHUKU -->
+    <section id="gashuku" class="section">
+      <h2>E. Gashuku & Kenaikan Tingkat 2025</h2>
+      <p>Dokumentasi gashuku & kenaikan tingkat Kenshi se-Jawa Tengah tahun 2025.</p>
+      <img src="images/gashuku1.jpeg" alt="Gashuku">
+    </section>
+
+    <!-- PELATIHAN -->
+    <section id="pelatihan" class="section">
+      <h2>F. Pelatihan Pelatih & Wasit</h2>
+      <p>Konten pelatihan peningkatan kompetensi pelatih & wasit.</p>
+    </section>
+
+    <!-- KAB/KOTA -->
+    <section id="kabkota" class="section">
+      <h2>G. Kegiatan di Kabupaten & Kota se-Jawa Tengah</h2>
+      <p>Rangkuman kegiatan dojo-dojo daerah sepanjang 2025.</p>
+    </section>
+
+    <!-- SHARE LINKS -->
+    <div class="share-links">
+      <h5>Bagikan halaman ini:</h5>
+      <a href="https://api.whatsapp.com/send?text=Lihat%20promosi%20Shorinji%20Kempo%20Jawa%20Tengah%20:%20https://shorinji-kempo-jateng.netlify.app" target="_blank">WhatsApp</a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://shorinji-kempo-jateng.netlify.app" target="_blank">Facebook</a>
+      <a href="https://twitter.com/intent/tweet?url=https://shorinji-kempo-jateng.netlify.app" target="_blank">Twitter</a>
+      <a href="https://t.me/share/url?url=https://shorinji-kempo-jateng.netlify.app" target="_blank">Telegram</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://shorinji-kempo-jateng.netlify.app" target="_blank">LinkedIn</a>
+      <button id="copyLink" class="btn btn-outline-dark btn-sm" style="margin-left:8px;">Copy Link</button>
+    </div>
+
+  </main>
+
+<script>
+  // TOC toggle behavior
+  const tocToggle = document.getElementById('toc-toggle');
+  const tocPanel = document.getElementById('toc-panel');
+  tocToggle.addEventListener('click', () => {
+    tocPanel.style.display = tocPanel.style.display === 'block' ? 'none' : 'block';
+  });
+
+  // clicking items -> show section, hide panel
+  document.querySelectorAll('#toc-panel a[data-target]').forEach(a=>{
+    a.addEventListener('click', (e)=>{
+      e.preventDefault();
+      const id = a.getAttribute('data-target');
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      const target = document.getElementById(id);
+      if(target) target.classList.add('active');
+      // hide panel
+      tocPanel.style.display = 'none';
+      // scroll to top of main container for visibility
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  // Copy link
+  document.getElementById('copyLink').addEventListener('click', () => {
+    const url = 'https://shorinji-kempo-jateng.netlify.app';
+    navigator.clipboard?.writeText(url).then(() => {
+      alert('Link disalin: ' + url);
+    }).catch(()=> {
+      prompt('Salin link ini:', url);
+    });
+  });
+
+  // Close TOC if clicked outside
+  document.addEventListener('click', function(e){
+    if(!tocPanel.contains(e.target) && !tocToggle.contains(e.target)){
+      tocPanel.style.display = 'none';
+    }
+  });
+</script>
+
+</body>
+>>>>>>> b08460045f53ca52fb14f8227888c98c331fe533
 </html>
